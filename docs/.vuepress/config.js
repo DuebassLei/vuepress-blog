@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'DuebassLei',
+    title: '海边的小溪鱼',
     description: "在不断地学习和实践后所整理记录的个人笔记",
     lastUpdated: '最近更新',
     themeConfig: {
@@ -26,10 +26,14 @@ module.exports = {
                 ] },
         ],
         sidebar: {
-            '/study/java/': getJavaSidebar("Java","相关资源"),
-            '/study/docker/': getDockerSidebar("Docker","相关资源"),
-            '/study/javascript/': getJavascriptSidebar("Javascript","相关资源"),
-            '/study/linux/': getLinuxSidebar("Linux"),
+            '/study/java/': getJavaSidebar("Java Sheet","More"),
+            '/study/docker/': getDockerSidebar("Docker Sheet","More"),
+            '/study/javascript/': getJavascriptSidebar("Javascript Sheet","More"),
+            '/study/linux/': getLinuxSidebar("Linux Sheet","More"),
+            '/study/springboot/': getSBSidebar("SpringBoot Sheet","More"),
+            '/study/springcloud/': getSCSidebar("SpringCloud Sheet","More"),
+            '/study/vue/': getVueSidebar("Vue Sheet","More"),
+            '/study/other/': getOtherSidebar("Other Sheet","More")
         },
         // 假定 GitHub。也可以是一个完整的 GitLab URL。
         repo: 'https://github.com/DuebassLei/vuepress-blog',
@@ -55,8 +59,7 @@ function getDockerSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                '',
-                'DockerBasic'
+                ''
             ]
         },
         {
@@ -74,8 +77,7 @@ function getJavaSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                '',
-                'HashMap'
+                ''
             ]
         },
         {
@@ -87,24 +89,105 @@ function getJavaSidebar (groupA,groupB) {
         }
     ]
 }
-function getJavascriptSidebar (groupA) {
+function getJavascriptSidebar (groupA,groupB) {
     return [
         {
             title: groupA,
             collapsable: false,
             children: [
-                '',
-                'Echarts'
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
             ]
         }]
 }
-function getLinuxSidebar (groupA) {
+function getLinuxSidebar (groupA,groupB) {
     return [
         {
             title: groupA,
             collapsable: false,
             children: [
-                'ubuntu-java-install'
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
+            ]
+        }]
+}
+function getSBSidebar (groupA,groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            children: [
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
+            ]
+        }]
+}
+function getSCSidebar (groupA,groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            children: [
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
+            ]
+        }]
+}
+function getVueSidebar (groupA,groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            children: [
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
+            ]
+        }]
+}
+function getOtherSidebar (groupA,groupB) {
+    return [
+        {
+            title: groupA,
+            collapsable: false,
+            children: [
+                ''
+            ]
+        },
+        {
+            title: groupB,
+            collapsable: false,
+            children: [
+                'About'
             ]
         }]
 }

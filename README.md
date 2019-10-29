@@ -2,19 +2,6 @@
 
 :smile: 个人网站配置备份仓库
 
-## 文章目录
-
-* :star: [Java 文章汇总](../study/java/)
-* :star: [SpringBoot 文章汇总](../study/springboot/)
-* :star: [SpringCloud 文章汇总](../study/springcloud/)
-* :star: [Linux 文章汇总](../study/linux/)
-* :star: [Docker 文章汇总](../study/docker/)
-* :star: [Javascript 文章汇总](../study/javascript/)
-* :star: [Vue 文章汇总](../study/vue/)
-* :star: [其它](../study/other/)
-* :star: [我的收藏](../favorite/)
-
-
 ## 关于我
 * :four_leaf_clover: [DuebassLei的CSDN博客](https://blog.csdn.net/m0_37903882)
 * :four_leaf_clover: [DuebassLei 掘金](https://juejin.im/user/5aa1029c51882555770c0603)

@@ -1,1 +1,1 @@
-# :watermelon: JavaScript
+# :watermelon: Javascript
