@@ -1,67 +1,72 @@
----
-sidebar: auto
----
+# :strawberry: 在线备忘录
+不定期更新在学习/工作/生活中所了解的优秀的软件/工具/网站，做个在线备忘录。
 
-# FAQ
+## 在线工具
 
-## 为什么不能把 `palette.styl` 和 `index.styl` 合并到一个 API?
+- ProcessOn 在线作图工具，可以在线绘制 UML、流程图、脑图等，免费版可以保存 9 个文件。
+- 百度脑图 百度出品的一款较为良心的产品了，可以绘制脑图。
+- Cend.me 局域网文件传送
+- Clippings.io Kindle 标注文件导入到印象笔记
+- MSDN-itellyou 微软资源下载
 
-`palete.styl` 负责全局颜色设置。在编译期间，主题颜色常量应该首先由预处理器解析，然后应用于全局上下文。
+## 屏幕录制
 
-但对于 `index.styl`，它的工作是重写应用的默认样式。根据 CSS 的优先级原则，后一种样式具有更高的优先级，因此应该在 CSS 文件的末尾生成。
 
-描述 stylus 编译器编译顺序的简单图表如下：
+- Licecap
+>一款屏幕录制工具，支持导出GIF动画图片格式，轻量级、使用简单，录制过程中可以随意改变录屏范围。
 
-@flowstart <br />
-阶段1=>操作: palette.styl <br />
-阶段2=>操作: 默认 app 样式 <br />
-阶段3=>操作: index.styl <br />
+- GifCam
+>一款很聪明的GIF录屏工具，它能通过多画面的计算，将截取区域相同的部分自动删除，如果对截取区域没有操作，它会将此帧的画面延长，从而使你录制的GIF文件非常小。
 
-阶段1->阶段2->阶段3 <br />
-@flowend
+## 远程协助
 
-<br>
+- TeamViewer 远程协助及在线协作和会议功能的软件，商业软件个人使用免费。
+- RealVNC 是一款免费的远程控制跨多平台的程序。
+- AnyDesk 是一款远程控制跨多平台的程序（mac）。
 
-## `clientDynamicModules` 和 `enhanceAppFiles` 的区别是什么?
+## 系统优化
 
-让我们先来回顾一下，`clientDynamicModules` 和 `enhanceAppFiles` 都可以在编译期间通过动态 JavaScript 代码生成模块。
+- CCleaner 轻量 PC 优化工具，屡获殊荣（win）
 
-不同之处在于，当应用在客户端初始化时，`enhanceAppFiles` 生成的文件会自动加载和使用；而 `clientDynamicModules` 生成的文件则需要用户自己引入 `@dynamic/xxx`。
+## 科学上网
 
-```js
-module.exports = (options, ctx) => ({
-  // 被入口文件自动引入
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
+- openVPN 全平台支持，配置简单（推荐使用）
 
-  // 需要引入 '@dynamic/constans-b' 后使用
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
+## 终端
 
-## 什么时候需要使用 `enhanceAppFiles`?
+- Putty 一款不到1M的ssh连接工具，小巧方便，SSH 与 telnet 客户端
+- FileZilla 免费又好用的FTP客户端
+- Xshell 强大终端工具，支持 SSH SFTP TELNET RLOGIN 与 SERIAL
+- WinSCP 免费开源的 SFTP/FTP/WebDAV/SCP 客户端
+- Termius 多平台支持
 
-1. 当你需要在客户端自动执行一些代码时；
-2. 当你不需要复用这个模块时。
+## 办公
 
-**比如：**
+- UZER.ME
+>云端全能办公神器，访问这个网站，你就像打开了一台电脑，AutoCAD、Excel、PPT、Visio、PS 、Ai 这些软件，点击就能使用
 
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24)：在客户端自动注册组件
-- [@vuepress/plugin-pagination](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-pagination/index.js#L14)：自动注入 Vue 插件来拓展客户端 API
+- Araxis Merge 文件及目录比对神器
 
-## 什么时候需要使用 `clientDynamicModules`?
+## 格式转换
 
-1. 当你需要生成一个在特定时间被调用的动态模块时；
-2. 当你需要复用这个模块。
+- Convertio 它能一站解决任何格式转换需求，不用 PDF 转换一个网站，视频转换又一个网站，太复杂。
 
-**比如：**
+## 图像处理
 
-- [@vuepress/plugin-blog](https://github.com/ulivz/vuepress-plugin-blog/blob/master/src/index.ts#L167)：使用编译期元数据生成一些博客相关的动态模块并通过 `enhanceAppFiles` 将他们在客户端初始化
+- tinypng 图片压缩神器
+- bigpig 图片放大神器
+- processOn 专业作图聚合工具
+- draw.io 专业作图聚合工具，无需登录，打开即可使用，和processOn有相似功能
 
+## markdown 编辑器
+- Typora 支持导出多种格式（Mac,Win双平台支持）
+
+## 写作笔记
+- 语雀
+- 有道云笔记
+- 印象笔记
+
+
+::: tip 声明 
+本站软件全部来自网络，仅供交流学习使用不可私自传播。如作他用所承受的法律责任一概与作者无关。若无意伤害你的权益，请联系将立刻配合处理！
+:::

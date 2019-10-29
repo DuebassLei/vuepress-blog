@@ -1,5 +1,6 @@
 module.exports = {
-    title: '海边的小溪鱼',
+    title: 'DuebassLei',
+    description: "在不断地学习和实践后所整理记录的个人笔记",
     lastUpdated: '最近更新',
     themeConfig: {
         nav: [
@@ -16,25 +17,28 @@ module.exports = {
                     { text: 'other', link: '/study/other/' },
                 ]
             },
-            {text: '收藏', link: '/favorite/'},
-            {text: '个人博客', link: 'https://blog.csdn.net/m0_37903882'},
-            {text: 'GitHub', link: 'https://github.com/DuebassLei'}
+            {text: '收藏工具', link: '/favorite/'},
+            {text: '我的博客', items: [
+                    { text: 'CSDN', link: 'https://blog.csdn.net/m0_37903882' },
+                    { text: '掘金', link: 'https://juejin.im/user/5aa1029c51882555770c0603' },
+                    { text: '简书', link: 'https://www.jianshu.com/u/6740c2a5866d' },
+                    { text: '个人', link: 'https://www.gaosanshi.top' }
+                ] },
         ],
         sidebar: {
             '/study/java/': getJavaSidebar("Java","相关资源"),
             '/study/docker/': getDockerSidebar("Docker","相关资源"),
-
+            '/study/javascript/': getJavascriptSidebar("Javascript","相关资源"),
+            '/study/linux/': getLinuxSidebar("Linux"),
         },
         // 假定 GitHub。也可以是一个完整的 GitLab URL。
-        repo: 'vuejs/vuepress',
+        repo: 'https://github.com/DuebassLei/vuepress-blog',
         // 自定义项目git remote add origin https://github.com/DuebassLei/vuepress-blog.git仓库链接文字
         // 默认根据 `themeConfig.repo` 中的 URL 来自动匹配是 "GitHub"/"GitLab"/"Bitbucket" 中的哪个，如果不设置时是 "Source"。
         repoLabel: '贡献代码！',
-
         // 以下为可选的 "Edit this page" 链接选项
-
         // 如果你的文档和项目位于不同仓库：
-        docsRepo: 'vuejs/vuepress',
+        docsRepo: 'https://github.com/DuebassLei/vuepress-blog',
         // 如果你的文档不在仓库的根目录下：
         docsDir: 'docs',
         // 如果你的文档在某个特定的分支（默认是 'master' 分支）：
@@ -83,33 +87,24 @@ function getJavaSidebar (groupA,groupB) {
         }
     ]
 }
-
-function getGuideSidebar (groupA, groupB) {
+function getJavascriptSidebar (groupA) {
     return [
         {
             title: groupA,
             collapsable: false,
             children: [
                 '',
-                'getting-started',
-                'directory-structure',
-                'basic-config',
-                'assets',
-                'markdown',
-                'using-vue',
-                'i18n',
-                'deploy',
+                'Echarts'
             ]
-        },
+        }]
+}
+function getLinuxSidebar (groupA) {
+    return [
         {
-            title: groupB,
+            title: groupA,
             collapsable: false,
             children: [
-                'frontmatter',
-                'permalinks',
-                'markdown-slot',
-                'global-computed'
+                'ubuntu-java-install'
             ]
-        }
-    ]
+        }]
 }
