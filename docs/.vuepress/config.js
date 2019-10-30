@@ -33,7 +33,8 @@ module.exports = {
             '/study/springboot/': getSBSidebar("SpringBoot Sheet","More"),
             '/study/springcloud/': getSCSidebar("SpringCloud Sheet","More"),
             '/study/vue/': getVueSidebar("Vue Sheet","More"),
-            '/study/other/': getOtherSidebar("Other Sheet","More")
+            '/study/other/': getOtherSidebar("Other Sheet","More"),
+            '/favorite/': ['']
         },
         // 假定 GitHub。也可以是一个完整的 GitLab URL。
         repo: 'https://github.com/DuebassLei/vuepress-blog',
@@ -112,7 +113,8 @@ function getLinuxSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                ''
+                '',
+                'SetProxy'
             ]
         },
         {
@@ -129,7 +131,8 @@ function getSBSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                ''
+                '',
+                'poi-excel'
             ]
         },
         {

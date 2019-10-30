@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 2
+sidebar: auto
 ---
 
 # :strawberry: 在线备忘录

@@ -1,3 +1,6 @@
+---
+sidebar: auto
+---
 # :rabbit2: 站点导航
 
 ## 文章目录
