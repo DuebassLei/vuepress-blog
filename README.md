@@ -29,7 +29,7 @@
 
 ## 如果觉得文章不错，请我吃颗棒棒糖吧~~
 
-![棒棒糖](./docs/image/wxPay.png)
+![棒棒糖](docs/image/wxPay.png)
 
 
 
