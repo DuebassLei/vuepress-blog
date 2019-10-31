@@ -19,10 +19,11 @@ module.exports = {
             },
             {text: '收藏工具', link: '/favorite/'},
             {text: '我的博客', items: [
-                    { text: 'CSDN', link: 'https://blog.csdn.net/m0_37903882' },
+                    { text: 'csdn', link: 'https://blog.csdn.net/m0_37903882' },
                     { text: '掘金', link: 'https://juejin.im/user/5aa1029c51882555770c0603' },
                     { text: '简书', link: 'https://www.jianshu.com/u/6740c2a5866d' },
-                    { text: '个人', link: 'https://www.gaosanshi.top' }
+                    { text: '码云', link: 'https://gitee.com/DuebassLei' },
+                    { text: '个人网站', link: 'https://duebasslei.gitee.io' }
                 ] },
         ],
         sidebar: {
@@ -162,7 +163,9 @@ function getVueSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                ''
+                '',
+                'Moment',
+                'arrayConvertTree'
             ]
         },
         {

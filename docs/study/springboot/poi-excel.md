@@ -62,7 +62,7 @@ public class WriterExcel {
     }
 }
 ```
-![向excel中插入数据](../../.vuepress/public/springboot/insert-excel.png)
+![向excel中插入数据](../../image/insert-excel.png)
 
 ## 读取数据
 ```java
@@ -100,7 +100,7 @@ public class ReadExcel {
     }
 }
 ```
-![读取excel数据](../../.vuepress/public/springboot/read-excel.png)
+![读取excel数据](../../image/read-excel.png)
 
 ## 插入带计算公式
 ```java
@@ -132,7 +132,7 @@ public class FormulaExcel {
        }
 }
 ```
-![插入带计算公式](../../.vuepress/public/springboot/calc-excel.png)
+![插入带计算公式](../../image/calc-excel.png)
 ## 单元格值在一定范围内着色
 >值在配置范围[50-70]内的任何单元格着色
 ```java
@@ -174,7 +174,7 @@ public class FomatExcel {
     }
 }
 ```
-![单元格值在一定范围内着色](../../.vuepress/public/springboot/color-excel.png)
+![单元格值在一定范围内着色](../../image/color-excel.png)
 
 ## 交替行变色
 ```java 
@@ -195,7 +195,7 @@ public class FomatExcel {
     }
 ```
 
-![交替行变色](../../.vuepress/public/springboot/varColor-excel.png)
+![交替行变色](../../image/varColor-excel.png)
 
 ## 设置到期时间
 ```java 
@@ -229,7 +229,7 @@ public class FomatExcel {
 }
 ```
 
-![设置到期时间](../../.vuepress/public/springboot/expireDate-excel.png)
+![设置到期时间](../../image/expireDate-excel.png)
 
 ## 数据库数据写入Excel
 ```java 
@@ -285,9 +285,9 @@ public class FomatExcel {
         return ResultBean.success();
     }
 ```
-![Swagger接口测试](../../.vuepress/public/springboot/swagger-excel.png)
-![导出数据](../../.vuepress/public/springboot/export-excel.png)
-![数据库数据](../../.vuepress/public/springboot/db-excel.png)
+![Swagger接口测试](../../image/swagger-excel.png)
+![导出数据](../../image/export-excel.png)
+![数据库数据](../../image/db-excel.png)
 
 :smile: 到这里实现了`poi`对`excel`的基本操作啦>_<
 
