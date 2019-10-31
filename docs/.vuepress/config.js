@@ -36,7 +36,8 @@ module.exports = {
             '/study/other/': getOtherSidebar("Other Sheet","More"),
             '/favorite/': ['']
         },
-        base: "/vuepress-blog/",
+        base: '/',
+        dest: './docs/.vuepress/dist',
         // 假定 GitHub。也可以是一个完整的 GitLab URL。
         repo: 'https://github.com/DuebassLei/vuepress-blog',
         // 自定义项目git remote add origin https://github.com/DuebassLei/vuepress-blog.git仓库链接文字
@@ -108,7 +109,8 @@ function getLinuxSidebar (groupA,groupB) {
             collapsable: false,
             children: [
                 '',
-                'SetProxy'
+                'SetProxy',
+                'Git-Qs'
             ]
         },
         {
