@@ -165,3 +165,41 @@ const obj1 = {a: 1};
 const obj2 = JSON.parse(JSON.stringify(obj1));
 ```
 
+## FormData
+>接口提供了一种表示表单数据的键值对的构造方式,如果送出时的编码类型被设为 "multipart/form-data"，它会使用和表单一样的格式。
+
+### :apple: 新建`FormData`对象并添加数据
+```javascript
+var formData = new FormData();
+formData.append('key1', 'value1');
+formData.append('key2', 'value2');
+```
+
+### :apple: FormData.values() 
+方法返回一个允许遍历该对象中所有值的 迭代器 。这些值是 `USVString` 或是`Blob`对象。
+```javascript
+// 获取所有值
+for (var value of formData.values()) {
+   console.log(value); 
+}
+//output:
+//  value1
+//  value2
+```
+## :apple: 遍历对象属性、值插入FormData
+```javascript
+      let obj = { 
+              userName: "zhang san",
+              password: "root1234",
+              tel: "8008208820",
+              address: "北京",
+              email: "test@163.com"
+            };
+      const formData = new FormData();
+      
+      Object.keys(obj).forEach(key => {
+        formData.append(key, obj[key]);
+      });
+```
+
+
