@@ -186,7 +186,7 @@ for (var value of formData.values()) {
 //  value1
 //  value2
 ```
-## :apple: 遍历对象属性、值插入FormData
+### :apple: 遍历对象属性、值插入FormData
 ```javascript
       let obj = { 
               userName: "zhang san",
@@ -201,5 +201,77 @@ for (var value of formData.values()) {
         formData.append(key, obj[key]);
       });
 ```
+
+## fetch
+### :star: 基本使用
+```javascript
+fetch('/data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => ...)
+  ```
+
+  ### :star: 请求选项
+  ```javascript
+  fetch('/data.json', {
+  method: 'post',
+  body: new FormData(form), // post body
+  body: JSON.stringify(...),
+
+  headers: {
+    'Accept': 'application/json'
+  },
+
+  credentials: 'same-origin', // send cookies
+  credentials: 'include',     // send cookies, even in CORS
+
+})
+  ```
+### :star: 与node.js一起使用
+```javascript
+const fetch = require('isomorphic-fetch')
+```
+
+### :star: 响应
+```javascript
+fetch('/data.json')
+.then(res => {
+  res.text()       // response body (=> Promise)
+  res.json()       // parse via JSON (=> Promise)
+  res.status       //=> 200
+  res.statusText   //=> 'OK'
+  res.redirected   //=> false
+  res.ok           //=> true
+  res.url          //=> 'http://site.com/data.json'
+  res.type         //=> 'basic'
+                   //   ('cors' 'default' 'error'
+                   //    'opaque' 'opaqueredirect')
+
+  res.headers.get('Content-Type')
+})
+```
+
+### :star: 捕捉异常
+```javascript
+fetch('/data.json')
+  .then(checkStatus)
+
+
+function checkStatus (res) {
+  if (res.status >= 200 && res.status < 300) {
+    return res
+  } else {
+    let err = new Error(res.statusText)
+    err.response = res
+    throw err
+  }
+}
+```
+非2xx响应仍然是成功的请求。使用另一个函数将其转换为错误。
+>参考
+- https://fetch.spec.whatwg.org/
+- https://www.npmjs.com/package/whatwg-fetch
 
 
