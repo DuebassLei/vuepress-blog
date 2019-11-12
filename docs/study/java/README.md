@@ -34,3 +34,15 @@ Content-Type: application/json
   'message': "You're not logged in."
 }
 ```
+
+## :heart: `request.getParameter()`
+>获取参数为`null`和`""`空字符串的区别
+
+### `""`空字符串
+
+当`url`里有`name`属性,但是没有值的时候后台用`request.getParameter("name")`获取的是空字符串`""`
+
+### `null`
+
+当`url`里没有`name`属性,`request.getParameter("name")`获取的值是`null`
+
