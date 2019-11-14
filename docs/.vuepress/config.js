@@ -1,6 +1,6 @@
 module.exports = {
     title: '海边的小溪鱼',
-    description: "在不断地学习和实践后所整理记录的个人笔记",
+    description: "生活点滴可爱，都值得我前进>_<",
     lastUpdated: '最近更新',
     themeConfig: {
         nav: [
