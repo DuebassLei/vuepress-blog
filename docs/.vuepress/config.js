@@ -129,7 +129,8 @@ function getSBSidebar (groupA,groupB) {
             collapsable: false,
             children: [
                 '',
-                'poi-excel'
+                'poi-excel',
+                'vue-excel'
             ]
         },
         {
