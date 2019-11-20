@@ -46,3 +46,17 @@ Content-Type: application/json
 
 当`url`里没有`name`属性,`request.getParameter("name")`获取的值是`null`
 
+## :heart: 提取双引号中间的值（`regex`）
+```java
+String str1 = "\"小明\"";
+		String ps = "(?<=\").*?(?=\")";
+		Pattern p = Pattern.compile(ps);
+		Matcher m = p.matcher(str1);
+		while(m.find()){
+			System.out.println(m.group());
+		}
+    
+    // output: 小明
+```
+
+
