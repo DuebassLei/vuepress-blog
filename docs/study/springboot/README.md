@@ -1,4 +1,4 @@
-# :watermelon: SpringBoot
+# :bookmark: SpringBoot
 ## Springboot之图片下载
 >以前使用`HttpServletResponse`可以通过输出流的方式来向前台输出图片。现在大部分都是使用`springboot`，在使用`springboot`之后，我们应该如何来修改代码呢？
 
