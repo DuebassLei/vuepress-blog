@@ -92,7 +92,8 @@ function getJavascriptSidebar (groupA,groupB) {
             title: groupA,
             collapsable: false,
             children: [
-                ''
+                '',
+                'js-tools'
             ]
         },
         {
