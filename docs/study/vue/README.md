@@ -1,4 +1,4 @@
-# :watermelon: Vue
+# :bookmark: Vue
 ## `Eslint`
 ### :bookmark: 常用配置
 ```js {4}
