@@ -112,7 +112,8 @@ function getLinuxSidebar (groupA,groupB) {
             children: [
                 '',
                 'SetProxy',
-                'Git-Qs'
+                'Git-Qs',
+                'openVPN-ios'
             ]
         },
         {
