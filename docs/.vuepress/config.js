@@ -113,7 +113,8 @@ function getLinuxSidebar (groupA,groupB) {
                 '',
                 'SetProxy',
                 'Git-Qs',
-                'openVPN-ios'
+                'openVPN-ios',
+                'install-tools'
             ]
         },
         {
